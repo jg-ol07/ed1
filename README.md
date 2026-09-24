@@ -10,7 +10,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Linguagem-C%20%2F%20C%2B%2B-00599C?style=for-the-badge&logo=c" alt="Linguagem C" />
   <img src="https://img.shields.io/badge/Status-Em%20Progresso-brightgreen?style=for-the-badge" alt="Status" />
-  <img src="https://img.shields.io/badge/Semestre-2026.1-orange?style=for-the-badge" alt="Semestre" />
+  <img src="https://img.shields.io/badge/Semestre-2026.2-orange?style=for-the-badge" alt="Semestre" />
 </p>
 
 ---
