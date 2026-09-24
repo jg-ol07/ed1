@@ -25,11 +25,11 @@ Este repositório contém as soluções das listas práticas e teóricas da disc
 
 ## 🗺️ Tópicos Abordados
 
-- [x] Ponteiros e Alocação Dinâmica de Memória (`malloc`, `free`, `realloc`)
-- [x] Tipos Abstratos de Dados (TADs) e Modularização
-- [x] Análise de Complexidade de Algoritmos (Notação Big-O)
-- [x] Listas Estáticas e Dinâmicas (Simplesmente e Duplamente Encadeadas)
-- [x] Pilhas (Stacks) e Filas (Queues)
+- [ ] Ponteiros e Alocação Dinâmica de Memória (`malloc`, `free`, `realloc`)
+- [ ] Tipos Abstratos de Dados (TADs) e Modularização
+- [ ] Análise de Complexidade de Algoritmos (Notação Big-O)
+- [ ] Listas Estáticas e Dinâmicas (Simplesmente e Duplamente Encadeadas)
+- [ ] Pilhas (Stacks) e Filas (Queues)
 - [ ] Listas Circulares
 - [ ] Algoritmos de Ordenação Elementares (*Bubble*, *Insertion*, *Selection*)
 
@@ -65,9 +65,9 @@ A organização dos arquivos segue o padrão modular abaixo:
 
 | Lista | Tópico Principal | Status | Exercícios |
 | :---: | :--- | :---: | :---: |
-| **01** | Revisão de C, Ponteiros & Alocação Dinâmica | ✅ Concluída | 10 / 10 |
-| **02** | Tipos Abstratos de Dados (TAD) | ✅ Concluída | 06 / 06 |
-| **03** | Listas Lineares Encadeadas | 🔄 Em andamento | 05 / 08 |
+| **01** | Revisão de C, Ponteiros & Alocação Dinâmica | 🔄 Em andamento | 4 / 8 |
+| **02** | Tipos Abstratos de Dados (TAD) | ⏳ Pendente | 00 / 06 |
+| **03** | Listas Lineares Encadeadas | ⏳ Pendente | 00 / 08 |
 | **04** | Pilhas e Filas (Estáticas e Dinâmicas) | ⏳ Pendente | 00 / 06 |
 | **05** | Aplicações e Algoritmos de Ordenação | ⏳ Pendente | 00 / 05 |
 
