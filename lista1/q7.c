@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 void inverter(int *v, int tam){
-    int i = 0;
     int j = tam - 1;
-    for(i; i < j; i++){
+    for(int i = 0; i < j; i++){
         int aux = v[j];
         v[j] = v[i];
         v[i] = aux;
