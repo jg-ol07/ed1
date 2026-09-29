@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/* Para inverter um vetor "in-place" (diretamente na memória original, sem alocar memória adicional), utilizamos a estratégia de dois ponteiros/índices:
+um índice 'i' iniciando no começo do bloco de memória e um índice 'j' iniciando na última posição válida (tam - 1).
+Como 'v' aponta diretamente para o bloco contíguo na memória RAM onde o vetor reside, a cada iteração acessamos as duas posições extremas v[i] e v[j].
+Fazemos a troca direta de seus conteúdos utilizando uma variável auxiliar (aux) para não sobrescrever um dado antes de guardá-lo.
+À medida que 'i' avança e 'j' recua, os dados vão sendo reordenados na memória original até que os índices se cruzem no meio do vetor.
+*/
+
 void inverter(int *v, int tam){
     int i = 0;
     int j = tam - 1;
