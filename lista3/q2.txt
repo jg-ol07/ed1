@@ -1,0 +1,8 @@
+(a) -  compilaria.
+(b) - não compilaria, erro: storage size of pilha isnt known.
+(c) - compilaria.
+(d) -  não compilaria, não sabemos do offset.
+(e) - compilaria, pois estariamos pegando o tamanho do ponteiro
+(f) - compilaria, seria 8 bytes
+(g) - não compilaria, não sabemos o tamanho de ponto
+(h) - compilaria, so estamos copiando um ponteiro

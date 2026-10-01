@@ -1,0 +1,8 @@
+
+resposta:
+o arquivo ponto.h produz encpasulamento por meio de structs opacos, que impedem que o usuário acessem de forma direta os campos do struct
+em um struct com os seguintes campos:
+int numero; e char nome[32]; erro: invalid use of imcomplete typedef "pilha"
+o usuário seria incapaz de acessa-los por meio de coisas como x.numero ou x->nome (muito util em coisas como a pilha)
+ou até mesmo, declarar o proprio struct, como:
+Pilha x; -> erro: storage size of Pilha isnt known.
