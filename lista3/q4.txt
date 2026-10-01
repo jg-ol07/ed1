@@ -1,0 +1,12 @@
+saida 1:
+5
+saida 2:
+2
+saida 3:
+4.0 e 6.0
+saida 4:
+0
+
+(b) nao tenho como fazer # sos
+
+(c) executar free(NULL) é seguro, mas executar duplamente pode corromper o heap (caso a = NULL nao existisse, visto que ficamos com dangling pointer).
