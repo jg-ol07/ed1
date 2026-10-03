@@ -3,6 +3,8 @@
 #include <string.h>
 #include "lista_preco.h"
 
+/*ESTE ARQUIVO FOI GERADO POR UMA LLM (CLAUDE SONNET 5.5), ELE FOI UTILIZADO COM O INTUITO DE AUTOMATIZAR OS TESTE REALIZADOS DOS MEUS ALGORITMOS, ENCONTRADOS EM LISTA_PRECO.C
+*/
 static int total = 0, passou = 0;
 
 static struct produto mk(int codigo, const char *nome, float preco) {
