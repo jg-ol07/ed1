@@ -86,8 +86,12 @@ int busca_tarefa_pos(ListaTarefas* li, int pos, struct tarefa *t);
 int busca_tarefa_cod(ListaTarefas* li, int codigo, struct tarefa *t);
 
 int conta_tarefas_prioridade(ListaTarefas *li, int prioridade);
-
+int tarefa_mais_urgente(ListaTarefas *li, struct tarefa *t);
 int busca_tarefa_desc(ListaTarefas *li, char *texto, struct tarefa *t);
-
+int insere_tarefa_final_prioridade(ListaTarefas *li, struct tarefa t);
+int remove_tarefas_prioridade(ListaTarefas *li, int prioridade);
+int inverte_lista(ListaTarefas *li);
+int remove_tarefa_pos(ListaTarefas *li, int pos);
+int mescla_tarefas(ListaTarefas *dst, ListaTarefas *src);
 
 #endif /* LISTA_DIN_ENCAD_H */

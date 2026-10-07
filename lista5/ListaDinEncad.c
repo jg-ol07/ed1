@@ -301,6 +301,7 @@ int insere_tarefa_final_prioridade(ListaTarefas *li, struct tarefa t){
         no = no->prox;
     }
     if(ultimo == NULL){
+        
         return insere_tarefa_final(li, t);
     }
     Elem *novo = (Elem*) malloc(sizeof(Elem));
@@ -311,4 +312,118 @@ int insere_tarefa_final_prioridade(ListaTarefas *li, struct tarefa t){
     novo->prox = ultimo->prox;
     ultimo->prox = novo;
     return 1;
+}
+
+/*
+* QUESTÃO 5:
+*/
+int remove_tarefas_prioridade(ListaTarefas* li, int prioridade){
+    if(li == NULL){
+        return -1;
+    }
+    int removidos = 0;
+    Elem *ant = NULL;
+    Elem *atual = *li;
+
+    while(atual != NULL){
+        if(atual->dados.prioridade == prioridade){
+            Elem *aux = atual;
+            if(ant == NULL){
+                *li = atual->prox;
+                atual = *li;
+            }else{
+                ant->prox = atual->prox;
+                atual = atual->prox;
+            }
+            free(aux);
+            removidos++;
+        }else{
+            ant = atual;
+            atual = atual->prox;
+        }
+    }
+    return removidos;
+}
+
+/*
+* QUESTÃO 6:
+*/
+int inverte_lista(ListaTarefas* li){
+    if(li == NULL){
+        return 0;
+    }
+    Elem *ant = NULL;
+    Elem *atual = *li;
+    Elem *prox = NULL;
+
+    while(atual != NULL){
+        prox = atual->prox;
+        atual->prox = ant;
+        ant = atual;
+        atual = prox;
+    }
+    *li = ant;
+    return 1;
+}
+
+/*
+* QUESTÃO 7:
+*/
+int remove_tarefa_pos(ListaTarefas* li, int pos){
+    if(li == NULL || *li == NULL || pos <= 0){
+        return 0;
+    }
+    Elem *ant = NULL;
+    Elem *atual = *li;
+    int p = 1;
+
+    while(atual != NULL && p < pos){
+        ant = atual;
+        atual = atual->prox;
+        p++;
+    }
+
+    if(atual == NULL){
+        return 0;
+    }
+
+    if(ant == NULL){
+        *li = atual->prox;
+    }else{
+        ant->prox = atual->prox;
+    }
+    free(atual);
+    return 1;
+}
+
+/*
+* QUESTÃO 8:
+*/
+int mescla_tarefas(ListaTarefas* dst, ListaTarefas* src){
+    if(dst == NULL || src == NULL || dst == src){
+        return -1;
+    }
+    if(*src == NULL){
+        return 0;
+    }
+
+    int transferidas = 0;
+    Elem *no = *src;
+    while(no != NULL){
+        transferidas++;
+        no = no->prox;
+    }
+
+    if(*dst == NULL){
+        *dst = *src;
+    }else{
+        Elem *ultimo_dst = *dst;
+        while(ultimo_dst->prox != NULL){
+            ultimo_dst = ultimo_dst->prox;
+        }
+        ultimo_dst->prox = *src;
+    }
+
+    *src = NULL;
+    return transferidas;
 }
