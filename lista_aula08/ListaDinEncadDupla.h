@@ -121,3 +121,7 @@ int busca_lista_mat(Lista* li, int mat, struct aluno *al);
 #endif /* LISTA_DIN_ENCAD_DUPLA_H */
 
 void imprime_lista_inversa(Lista* li);
+
+int lista_consistente(Lista* li);
+
+int remove_lista1(Lista* li, int mat);

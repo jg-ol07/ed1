@@ -225,6 +225,7 @@ int busca_lista_mat(Lista* li, int mat, struct aluno *al) {
     }
 }
 
+//questão 1.
 void imprime_lista_inversa(Lista* li){
     if (li == NULL || (*li) == NULL){
         printf("houve um erro ao tentar imprimir a lista");
@@ -242,3 +243,69 @@ void imprime_lista_inversa(Lista* li){
         }
     } while (no->ant != NULL);
 }
+
+//questão 2.
+int lista_consistente(Lista* li){
+    if(li == NULL){
+        return 0;
+    }
+    if((*li) == NULL){
+        printf("sua lista está vazia, mas por isso, ela é consistente.");
+        return 1;
+    }
+    
+    int flag = 0;
+    Elem *no = *li;
+    
+    if(no->ant == NULL){
+        flag++;
+    }
+    while(no->prox != NULL){
+        if(no->prox->ant != no){
+            printf("sua lista não é consistente.");
+            return 0;
+        }else{
+            no = no->prox;
+        }
+        
+    }
+    
+    flag++;
+    
+    if(flag > 1){
+        return 1;
+    }else{
+        return 0;
+    }
+
+}
+
+//questão 3.
+int remove_lista1(Lista* li, int mat){
+    if(li == NULL) return 0;
+    if((*li) == NULL) return 0;
+
+    Elem* no = *li;
+
+    while(no != NULL && no->dados.matricula != mat){
+        no = no->prox;
+    }
+    if(no == NULL){
+        return 0;
+    }
+
+    if(no->ant == NULL){
+        *li = no->prox;
+    }else{
+        no->ant->prox = no->prox;
+    }
+    if(no->prox != NULL){
+        no->prox->ant = no->ant;
+    }
+    free(no);
+
+    return 1;
+}
+
+//questão 4.
+
