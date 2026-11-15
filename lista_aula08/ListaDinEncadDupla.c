@@ -308,4 +308,122 @@ int remove_lista1(Lista* li, int mat){
 }
 
 //questão 4.
+int remove_lista_pos(Lista* li, int pos){
+    if(li == NULL || pos <= 0 || (*li) == NULL || pos > tamanho_lista(li)){
+        return 0;
+    }
+    int i = 1;
+    Elem* no = *li;
+    while(i < pos){
+        no = no->prox;
+        i++;
+    }
+    remove_lista(li, no->dados.matricula);
+    return 1;
+}
+
+//questão 5.
+int move_para_inicio(Lista* li, int mat){
+    if(li == NULL || (*li) == NULL){
+        return 0;
+    } 
+    Elem* primeiro = *li;
+    Elem* no = *li;
+
+    while(no != NULL && no->dados.matricula != mat){
+        no =  no->prox;
+    }
+    
+    if(no == NULL){
+        printf("a matricula nao foi encontrada.");
+        return 0;
+    }else if(no->ant == NULL){
+        printf("a matricula ja esta no inicio da lista.");
+        return 1;
+    }
+
+
+    //religando ponteiros da posição:
+    no->ant->prox = no->prox;
+    if(no->prox != NULL){
+        no->prox->ant = no->ant; 
+    }
+    
+
+    //como vamos pra primeira posição, precisamos zerar o valor de ant
+    no->ant = NULL;
+    no->prox = *li;
+    primeiro->ant = no;
+    *li = no;
+
+    return 1;
+
+}
+
+//questão 6.
+int remove_todos(Lista* li, int mat){
+    if(li == NULL || (*li) == NULL){
+        return 0;
+    }
+
+    int removidos = 0;
+    Elem* aux = *li;
+    Elem* no = *li;
+    while(no != NULL){
+        if(no->dados.matricula == mat){
+            if(no->ant != NULL){
+                no->ant->prox = no->prox;
+            }else{
+                *li = no->prox;
+            }
+            if(no->prox != NULL){
+                no->prox->ant = no->ant;
+            }
+            aux = no;
+            no = no->prox;
+            free(aux);
+            removidos++;
+            
+        }else{
+            no = no->prox;
+        }
+        
+    }
+    return removidos;
+
+}
+
+//questão 7.
+void inverte_lista(Lista* li){
+    if(li == NULL || (*li) == NULL){
+        printf("lista invalida\n");
+        return;
+    }
+
+    Elem* aux = NULL;
+    Elem* no = *li;
+
+    while(no != NULL){
+        aux = no->ant;
+        no->ant = no->prox;
+        no->prox = aux;
+
+        if(no->ant == NULL){
+            *li = no;
+        }
+        no = no->ant;
+    }
+
+    int resultado = lista_consistente(li);
+    if(resultado){
+        printf("operacao concluida com sucesso\n");
+        return;
+    }else{
+        printf("houve algo errado com a operação\n");
+        return;
+    }
+}
+
+//questão 8.
+
 

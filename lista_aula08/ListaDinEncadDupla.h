@@ -125,3 +125,11 @@ void imprime_lista_inversa(Lista* li);
 int lista_consistente(Lista* li);
 
 int remove_lista1(Lista* li, int mat);
+
+int remove_lista_pos(Lista* li, int pos);
+
+int move_para_inicio(Lista* li, int mat);
+
+int remove_todos(Lista* li, int mat);
+
+void inverte_lista(Lista* li);
