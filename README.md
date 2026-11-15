@@ -65,9 +65,9 @@ A organização dos arquivos segue o padrão modular abaixo:
 
 | Lista | Tópico Principal | Status | Exercícios |
 | :---: | :--- | :---: | :---: |
-| **01** | Revisão de C, Ponteiros & Alocação Dinâmica | 🔄 Em andamento | 4 / 8 |
-| **02** | Tipos Abstratos de Dados (TAD) | ⏳ Pendente | 00 / 06 |
-| **03** | Listas Lineares Encadeadas | ⏳ Pendente | 00 / 08 |
+| **01** | Revisão de C, Ponteiros & Alocação Dinâmica | Pronto| 8 / 8 |
+| **02** | Tipos Abstratos de Dados (TAD) | Pronto | 8 / 8 |
+| **03** | Listas Lineares Encadeadas | Pronto | 8 / 8 |
 | **04** | Pilhas e Filas (Estáticas e Dinâmicas) | ⏳ Pendente | 00 / 06 |
 | **05** | Aplicações e Algoritmos de Ordenação | ⏳ Pendente | 00 / 05 |
 
