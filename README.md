@@ -25,10 +25,10 @@ Este repositório contém as soluções das listas práticas e teóricas da disc
 
 ## 🗺️ Tópicos Abordados
 
-- [ ] Ponteiros e Alocação Dinâmica de Memória (`malloc`, `free`, `realloc`)
-- [ ] Tipos Abstratos de Dados (TADs) e Modularização
-- [ ] Análise de Complexidade de Algoritmos (Notação Big-O)
-- [ ] Listas Estáticas e Dinâmicas (Simplesmente e Duplamente Encadeadas)
+- [X] Ponteiros e Alocação Dinâmica de Memória (`malloc`, `free`, `realloc`)
+- [X] Tipos Abstratos de Dados (TADs) e Modularização
+- [X] Análise de Complexidade de Algoritmos (Notação Big-O)
+- [X] Listas Estáticas e Dinâmicas (Simplesmente e Duplamente Encadeadas)
 - [ ] Pilhas (Stacks) e Filas (Queues)
 - [ ] Listas Circulares
 - [ ] Algoritmos de Ordenação Elementares (*Bubble*, *Insertion*, *Selection*)
