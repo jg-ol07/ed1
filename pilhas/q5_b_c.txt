@@ -1,0 +1,43 @@
+
+b)
+int verifica_delimitadores(const char *s){
+    int tamanho = strlen(s);
+    int i = 0;
+    int conta_capacidade = 0;
+    char topo;
+
+    Pilha* pi = cria_Pilha(tamanho);
+
+    i = 0;
+    for(; i < tamanho; i++){
+        if(s[i] == '(' || s[i] == '[' || s[i] == '{'){
+            insere_Pilha(pi, s[i]);
+        }else if(s[i] == ')' || s[i] == ']' || s[i] == '}'){
+            
+            if(consulta_topo_Pilha(pi, &topo) == 0){
+                libera_Pilha(pi);
+                return 0;
+            }
+
+            if((s[i] == ')' && topo != '(')|| (s[i] == ']' && topo != '[') || (s[i] == '}' && topo != '{')){
+                printf("WARNING: nao ta aninhado\n");
+                libera_Pilha(pi);
+                return 0;
+            }
+
+            remove_Pilha(pi);
+        }
+
+    }
+
+    int valida = Pilha_vazia(pi);
+    libera_Pilha(pi);
+
+    return valida;
+
+}
+c)
+idealmente, a pilha teria que ter somente o numero de delimitadores que abrem, ja que dentro do algoritmo, nos podemos fazer comparações checando o topo da Pilha
+d)
+não, já que a questão 4c tem como solução somente a contagem de remoções em uma pilha, já a questão 5b, tem uma ordem de remoção especifica.
+por exemplo ([)], estaria errado, mesmo que a remoção tenha o mesmo numero de inserções (considerando que todo caractere que abre, insere, e o que fecha, desempilha.)

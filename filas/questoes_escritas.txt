@@ -1,0 +1,36 @@
+QUESTÃO 1:
+a) 
+1 insere: retorno 1 | qtd = 1 | inicio = a5 | final = a5 | vetor {a5, X, X, X};
+2 insere: retorno 1 | qtd = 2 | inicio = a5 | final = a8 | vetor {a5, a8, X, X};
+3 insere: retorno 1 | qtd = 3 | inicio = a5 | final = a3 | vetor {a5, a8, a3, X};
+4 remove: retorno 1 | qtd = 2 | inicio = a8 | final = a3 | vetor {a5, a8, a3, X};
+5 insere: retorno 1 | qtd = 3 | inicio = a8 | final = a9 | vetor {a5, a8, a3, a9};
+6 insere: retorno 1 | qtd = 4 | inicio = a8 | final = a7 | vetor {a7, a8, a3, a9};
+7 insere: retorno 0 | qtd = 4 | inicio = a8 | final = a7 | vetor {a7, a8, a3, a9};
+8 remove: retorno 1 | qtd = 3 | inicio = a3 | final = a7 | vetor {a7, a8, a3, a9};
+9 insere: retorno 1 | qtd = 4 | inicio = a3 | final = a6 | vetor {a7, a6, a3, a9};
+10 consulta: retorno 1 | al = inicio da fila.
+b)
+ordem final:
+a3,a9,a7,a6 
+aluno copiado pra al: a3.
+c)
+posições [0] e [1] (ou 1 e 2), pois como ao remover algo da fila nos somente avançamos o início, isso significa que nos avançamos dentro do vetor, e
+consequentemente, ao inserir mais um elemnto, nos sobreescrevemos a posição por um novo item. Isso nao faz a fila perder nenhum elemento pois como nos
+avançamos o início, esses elementos já não faziam mais parte da fila.z
+
+questão 2:
+b)
+ao executar fi->inicio = (fi->inicio - 1) % fi->capacidade, caso o valor seja zero, o resultado dessa operação va9i ser -1, o que nos impede de acessar o inidice 3 (ou4)
+c)
+não, pois a definição de fila é de que o primeiro a chegar saia primeiro, porem nesse caso, o primeiro, apesar de ter chegado antes, nao vai ser primeiro
+o que vai de encontro com a definição de fila FIFO. (na verdade, com essa função, se parece mais uma pilha)
+
+questão 3:
+b)
+a fila precisa ter a capacidade de n, ela nunca fica cheia pq além de nós criarmos a lista com a capacidade de n, nós nunca adicionamos nenhum item a lista
+acima da sua capacidade previa, ou seja, ela nunca enche, somente esvazia.
+c)
+Na Fila Estática Circular, tanto remove_Fila quanto insere_Fila têm custo O(1), pois apenas avançam os índices inicio e final de forma circular. Como há (n - 1) eliminações e em cada uma fazemos k remoções e (k - 1) inserções, o custo total da simulação é O(n * k).
+Já na Lista Sequencial Estática, apesar de insere_lista_final ser O(1), a função remove_lista_inicio tem custo O(n), pois precisa deslocar todos os elementos restantes uma posição para a esquerda a cada remoção. Fazendo k remoções em cada uma das (n - 1) rodadas, o custo total sobe para O(n² * k).
+Portanto, a Fila Estática Circular é muito mais adequada, pois evita o deslocamento de elementos na remoção do início e reduz o custo de O(n² * k) para O(n * k).
