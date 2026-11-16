@@ -29,8 +29,8 @@ Este repositório contém as soluções das listas práticas e teóricas da disc
 - [X] Tipos Abstratos de Dados (TADs) e Modularização
 - [X] Análise de Complexidade de Algoritmos (Notação Big-O)
 - [X] Listas Estáticas e Dinâmicas (Simplesmente e Duplamente Encadeadas)
-- [ ] Pilhas (Stacks) e Filas (Queues)
-- [ ] Listas Circulares
+- [X] Pilhas (Stacks) e Filas (Queues)
+- [X] Listas Circulares
 - [ ] Algoritmos de Ordenação Elementares (*Bubble*, *Insertion*, *Selection*)
 
 ---
@@ -68,7 +68,7 @@ A organização dos arquivos segue o padrão modular abaixo:
 | **01** | Revisão de C, Ponteiros & Alocação Dinâmica | Pronto| 8 / 8 |
 | **02** | Tipos Abstratos de Dados (TAD) | Pronto | 8 / 8 |
 | **03** | Listas Lineares Encadeadas | Pronto | 8 / 8 |
-| **04** | Pilhas e Filas (Estáticas e Dinâmicas) | ⏳ Pendente | 00 / 06 |
+| **04** | Pilhas e Filas (Estáticas e Dinâmicas) | Pendente | 05 / 06 |
 | **05** | Aplicações e Algoritmos de Ordenação | ⏳ Pendente | 00 / 05 |
 
 ---
